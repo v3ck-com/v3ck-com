@@ -97,6 +97,11 @@ header h1 {
 	/* Slight lift effect */
 }
 
+.logo {
+	width: 500px;
+	max-width: 90vw;
+}
+
 /* Footer Styling */
 footer {
 	margin-top: 40px;
