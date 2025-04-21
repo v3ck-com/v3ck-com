@@ -1,0 +1,130 @@
+/* Basic Reset and Body Styling */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto Mono', monospace;
+	/* Using Roboto Mono */
+	background: #000000;
+	/* Gradient using primary color */
+	color: #d9d9d9;
+	/* Light gray text color */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 20px;
+}
+
+.container {
+	max-width: 800px;
+	width: 100%;
+	text-align: center;
+}
+
+/* Header Styling */
+header h1 {
+	font-size: 3rem;
+	color: #ffffff;
+	/* White for contrast on the background */
+	margin-bottom: 30px;
+	/* font-weight: 600; removed for Roboto Mono consistency */
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+	/* Subtle shadow */
+}
+
+/* Glass Panel Styling */
+.glass-panel {
+	background: rgba(217, 217, 217, 0.1);
+	/* Light gray background with low opacity */
+	border-radius: 15px;
+	padding: 40px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	/* Subtle white border */
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+	/* Soft shadow */
+
+	/* The Glass Effect */
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	/* For Safari */
+
+	text-align: center;
+}
+
+.glass-panel h2 {
+	font-size: 1.8rem;
+	margin-bottom: 15px;
+	color: #ffffff;
+	/* White heading inside the panel */
+	/* font-weight: 400; removed for Roboto Mono consistency */
+}
+
+.glass-panel p {
+	font-size: 1rem;
+	margin-bottom: 30px;
+	color: #d9d9d9;
+	/* Light gray text */
+	/* font-weight: 300; removed for Roboto Mono consistency */
+	line-height: 1.6;
+}
+
+/* Call to Action Button */
+.cta-button {
+	display: inline-block;
+	padding: 12px 25px;
+	background-color: rgba(56, 110, 119, 0.8);
+	/* Slightly transparent primary color */
+	color: #ffffff;
+	/* White text */
+	border: none;
+	border-radius: 8px;
+	text-decoration: none;
+	/* font-weight: 400; removed for Roboto Mono consistency */
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	font-size: 0.9rem;
+	/* Slightly smaller font for button */
+}
+
+.cta-button:hover {
+	background-color: rgba(56, 110, 119, 1);
+	/* Opaque on hover */
+	transform: translateY(-2px);
+	/* Slight lift effect */
+}
+
+/* Footer Styling */
+footer {
+	margin-top: 40px;
+	font-size: 0.8rem;
+	color: rgba(217, 217, 217, 0.7);
+	/* Slightly transparent light gray */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+	header h1 {
+		font-size: 2.5rem;
+	}
+
+	.glass-panel {
+		padding: 30px;
+	}
+
+	.glass-panel h2 {
+		font-size: 1.5rem;
+	}
+
+	.glass-panel p {
+		font-size: 0.9rem;
+	}
+
+	.cta-button {
+		padding: 10px 20px;
+		font-size: 0.85rem;
+	}
+}
