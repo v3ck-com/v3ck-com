@@ -15,7 +15,7 @@
 
 /* Text gradient on hero heading */
 .text-gradient {
-	background: linear-gradient(135deg, #1ba8be 0%, #38c4d8 50%, #70dde9 100%);
+	background: linear-gradient(135deg, #33626b 0%, #6da0aa 50%, #9cb9be 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
