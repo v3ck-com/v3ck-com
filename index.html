@@ -1,81 +1,500 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>v3ck</title>
+	<title>v3ck | Simple; Efficient; Reliable — Custom Software Development</title>
 	<meta name="description"
-		content="v3ck delivers innovative custom software, web applications, and tailored tech solutions. Partner with us to build the future of your business.">
+		content="v3ck builds custom software, web applications, APIs, cloud solutions, and more. Simple; Efficient; Reliable — technology solutions designed for your success.">
+	<meta name="keywords"
+		content="custom software development, web applications, API development, cloud solutions, mobile apps, technology consulting, South Africa, Bloemfontein">
+	<meta name="author" content="v3ck">
+	<meta name="robots" content="index, follow">
+	<link rel="canonical" href="https://v3ck.com/">
 
-	<meta property="og:title" content="v3ck">
+	<!-- Open Graph -->
+	<meta property="og:title" content="v3ck — Simple; Efficient; Reliable">
 	<meta property="og:description"
-		content="Partner with v3ck for innovative custom software, web applications, and tailored tech solutions.">
+		content="Custom software, web applications, APIs, cloud solutions, and technology consulting. Partner with v3ck to build the future of your business.">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://v3ck.com/">
 	<meta property="og:image" content="https://v3ck.com/images/icon.png">
+	<meta property="og:image:width" content="512">
+	<meta property="og:image:height" content="512">
 	<meta property="og:site_name" content="v3ck">
 	<meta property="og:locale" content="en_ZA">
 
+	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="v3ck - Custom Software Development & Solutions">
+	<meta name="twitter:title" content="v3ck — Simple; Efficient; Reliable">
 	<meta name="twitter:description"
-		content="Partner with v3ck for innovative custom software, web applications, and tailored tech solutions.">
-	<meta name="twitter:image" content="https://v3ck.com/images/og-image.jpg">
-	<link rel="stylesheet" href="style.css">
+		content="Custom software, web applications, APIs, cloud solutions, and technology consulting.">
+	<meta name="twitter:image" content="https://v3ck.com/images/icon.png">
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<meta name="theme-color" content="#0a0a0a">
+
+	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-	<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "v3ck",
-      "url": "https://v3ck.com/",
-      "logo": "https://v3ck.com/images/logo.png",
-      "description": "v3ck delivers innovative custom software, web applications, and tailored tech solutions.",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "Customer Service",
-        "email": "jve.software@gmail.com"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "4 Soutpansberg Avenue",
-        "addressLocality": "Bloemfontein",
-        "postalCode": "9301",
-        "addressCountry": "ZA"
-      },
-      "sameAs": []
-    }
-    </script>
-
+	<!-- Tailwind CSS (Play CDN) -->
+	<script src="https://cdn.tailwindcss.com"></script>
 	<script>
-		document.querySelector('footer').innerHTML = `<p>&copy; ${new Date().getFullYear()} v3ck. All rights reserved.</p>`;
+		tailwind.config = {
+			theme: {
+				extend: {
+					fontFamily: {
+						sans: ['Inter', 'system-ui', 'sans-serif'],
+						mono: ['JetBrains Mono', 'monospace'],
+					},
+					colors: {
+						brand: {
+							50: '#edfcfd',
+							100: '#d2f6f9',
+							200: '#aaedf3',
+							300: '#70dde9',
+							400: '#38c4d8',
+							500: '#1ba8be',
+							600: '#1a879f',
+							700: '#1c6d82',
+							800: '#1f596a',
+							900: '#1e4a5a',
+							950: '#0d303d',
+						}
+					},
+					animation: {
+						'fade-up': 'fadeUp 0.6s ease-out forwards',
+						'fade-in': 'fadeIn 0.6s ease-out forwards',
+						'slide-down': 'slideDown 0.3s ease-out forwards',
+						'pulse-slow': 'pulse 3s ease-in-out infinite',
+						'scroll-line': 'scrollLine 2s ease-in-out infinite',
+					},
+					keyframes: {
+						fadeUp: {
+							'0%': { opacity: '0', transform: 'translateY(30px)' },
+							'100%': { opacity: '1', transform: 'translateY(0)' },
+						},
+						fadeIn: {
+							'0%': { opacity: '0' },
+							'100%': { opacity: '1' },
+						},
+						slideDown: {
+							'0%': { opacity: '0', transform: 'translateY(-10px)' },
+							'100%': { opacity: '1', transform: 'translateY(0)' },
+						},
+						scrollLine: {
+							'0%': { transform: 'scaleY(0)', transformOrigin: 'top' },
+							'50%': { transform: 'scaleY(1)', transformOrigin: 'top' },
+							'51%': { transform: 'scaleY(1)', transformOrigin: 'bottom' },
+							'100%': { transform: 'scaleY(0)', transformOrigin: 'bottom' },
+						}
+					}
+				}
+			}
+		}
+	</script>
+
+	<!-- Custom styles for things Tailwind can't do -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Structured Data -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"name": "v3ck",
+		"url": "https://v3ck.com/",
+		"logo": "https://v3ck.com/images/logo.png",
+		"description": "v3ck builds custom software, web applications, APIs, cloud solutions, and technology consulting. Simple; Efficient; Reliable.",
+		"slogan": "Simple; Efficient; Reliable",
+		"contactPoint": {
+			"@type": "ContactPoint",
+			"contactType": "Customer Service",
+			"email": "jve.software@gmail.com"
+		},
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "4 Soutpansberg Avenue",
+			"addressLocality": "Bloemfontein",
+			"postalCode": "9301",
+			"addressCountry": "ZA"
+		},
+		"sameAs": [
+			"https://github.com/v3ck-com"
+		],
+		"knowsAbout": [
+			"Custom Software Development",
+			"Web Application Development",
+			"API Development & Integration",
+			"Cloud Solutions",
+			"Mobile Application Development",
+			"Technology Consulting"
+		]
+	}
 	</script>
 </head>
 
-<body>
-	<div class="container">
-		<header>
-			<h1>
-				<img class="logo" src="images/logo.png" alt="v3ck logo">
+<body class="bg-neutral-950 text-neutral-300 font-sans antialiased">
+
+	<!-- Navigation -->
+	<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" role="navigation" aria-label="Main navigation">
+		<div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+			<a href="#hero" class="relative z-10" aria-label="v3ck home">
+				<img src="images/logo.png" alt="v3ck logo" class="h-8 w-auto" width="120" height="32">
+			</a>
+			<button id="nav-toggle" class="relative z-10 flex flex-col justify-center items-center w-10 h-10 md:hidden" aria-label="Toggle navigation menu" aria-expanded="false">
+				<span class="nav-hamburger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+				<span class="nav-hamburger-line block w-6 h-0.5 bg-white transition-all duration-300 mt-1.5"></span>
+				<span class="nav-hamburger-line block w-4 h-0.5 bg-white transition-all duration-300 mt-1.5 ml-auto"></span>
+			</button>
+			<ul id="nav-links" class="hidden md:flex items-center gap-8 text-sm font-medium">
+				<li><a href="#services" class="text-neutral-400 hover:text-white transition-colors duration-200">Services</a></li>
+				<li><a href="#about" class="text-neutral-400 hover:text-white transition-colors duration-200">About</a></li>
+				<li><a href="#contact" class="px-5 py-2 rounded-lg bg-brand-600/20 text-brand-400 border border-brand-500/30 hover:bg-brand-600/30 hover:border-brand-400/50 transition-all duration-200">Get in Touch</a></li>
+			</ul>
+		</div>
+		<!-- Mobile menu -->
+		<div id="mobile-menu" class="md:hidden hidden absolute top-0 left-0 right-0 bg-neutral-950/95 backdrop-blur-xl border-b border-neutral-800/50 pt-20 pb-8 px-6 animate-slide-down">
+			<ul class="flex flex-col gap-4 text-lg">
+				<li><a href="#services" class="block text-neutral-300 hover:text-white transition-colors py-2">Services</a></li>
+				<li><a href="#about" class="block text-neutral-300 hover:text-white transition-colors py-2">About</a></li>
+				<li><a href="#contact" class="block text-brand-400 hover:text-brand-300 transition-colors py-2">Get in Touch</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+		<!-- Background grid -->
+		<div class="hero-bg-grid absolute inset-0" aria-hidden="true"></div>
+		<!-- Radial glow -->
+		<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-brand-600/5 rounded-full blur-3xl" aria-hidden="true"></div>
+
+		<div class="relative z-10 max-w-4xl mx-auto px-6 text-center animate-on-scroll">
+			<!-- Badge -->
+			<div class="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full border border-neutral-700/50 bg-neutral-900/50 text-xs font-medium text-neutral-400 tracking-wider uppercase">
+				<span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse-slow"></span>
+				Software Development
+			</div>
+
+			<!-- Heading -->
+			<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight mb-6">
+				We Build Software<br>That <span class="text-gradient">Works</span>
 			</h1>
-		</header>
 
-		<main class="glass-panel">
-			<h2>Innovative Software Development</h2>
-			<p>We craft elegant custom software, efficient web applications, and tailored technology
-				solutions designed for your success.</p>
-			<a href="mailto:jve.software@gmail.com" class="cta-button">Get in Touch</a>
-		</main>
+			<!-- Slogan -->
+			<p class="flex items-center justify-center gap-3 text-lg sm:text-xl md:text-2xl font-mono font-medium text-neutral-400 mb-6">
+				<span class="slogan-word text-white">Simple</span>
+				<span class="text-brand-500">;</span>
+				<span class="slogan-word text-white">Efficient</span>
+				<span class="text-brand-500">;</span>
+				<span class="slogan-word text-white">Reliable</span>
+			</p>
 
-		<footer>
-			<p>&copy; 2025 v3ck. All rights reserved.</p>
-		</footer>
-	</div>
+			<!-- Description -->
+			<p class="max-w-2xl mx-auto text-base sm:text-lg text-neutral-400 leading-relaxed mb-10">
+				We craft custom software, web applications, and technology solutions engineered for performance and built to last.
+			</p>
+
+			<!-- CTAs -->
+			<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+				<a href="#services" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-brand-600 text-white font-medium hover:bg-brand-500 transition-all duration-200 shadow-lg shadow-brand-600/20 hover:shadow-brand-500/30 hover:-translate-y-0.5">
+					Our Services
+				</a>
+				<a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-lg border border-neutral-700 text-neutral-300 font-medium hover:border-neutral-500 hover:text-white transition-all duration-200 hover:-translate-y-0.5">
+					Contact Us
+				</a>
+			</div>
+		</div>
+
+		<!-- Scroll indicator -->
+		<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2" aria-hidden="true">
+			<span class="text-[10px] uppercase tracking-[0.2em] text-neutral-600">Scroll</span>
+			<div class="w-px h-8 bg-neutral-700 animate-scroll-line"></div>
+		</div>
+	</section>
+
+	<!-- Services Section -->
+	<section id="services" class="py-24 sm:py-32 relative">
+		<div class="max-w-6xl mx-auto px-6">
+			<!-- Section header -->
+			<div class="text-center mb-16 animate-on-scroll">
+				<span class="inline-block text-xs font-medium tracking-[0.2em] uppercase text-brand-400 mb-4">What We Do</span>
+				<h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">Services</h2>
+				<p class="max-w-xl mx-auto text-neutral-400">End-to-end software solutions tailored to your needs</p>
+			</div>
+
+			<!-- Services grid -->
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+				<!-- Custom Software -->
+				<article class="group p-6 rounded-2xl border border-neutral-800/50 bg-neutral-900/30 hover:bg-neutral-900/60 hover:border-neutral-700/50 transition-all duration-300 animate-on-scroll" aria-label="Custom Software Development">
+					<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-brand-600/10 text-brand-400 mb-5 group-hover:bg-brand-600/20 transition-colors duration-300">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<polyline points="16 18 22 12 16 6"></polyline>
+							<polyline points="8 6 2 12 8 18"></polyline>
+						</svg>
+					</div>
+					<h3 class="text-lg font-semibold text-white mb-2">Custom Software</h3>
+					<p class="text-sm text-neutral-400 leading-relaxed">Bespoke applications built from the ground up to solve your unique business challenges.</p>
+				</article>
+
+				<!-- Web Applications -->
+				<article class="group p-6 rounded-2xl border border-neutral-800/50 bg-neutral-900/30 hover:bg-neutral-900/60 hover:border-neutral-700/50 transition-all duration-300 animate-on-scroll" aria-label="Web Application Development">
+					<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-brand-600/10 text-brand-400 mb-5 group-hover:bg-brand-600/20 transition-colors duration-300">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<circle cx="12" cy="12" r="10"></circle>
+							<line x1="2" y1="12" x2="22" y2="12"></line>
+							<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+						</svg>
+					</div>
+					<h3 class="text-lg font-semibold text-white mb-2">Web Applications</h3>
+					<p class="text-sm text-neutral-400 leading-relaxed">Fast, responsive, and scalable web apps using modern frameworks and best practices.</p>
+				</article>
+
+				<!-- API Development -->
+				<article class="group p-6 rounded-2xl border border-neutral-800/50 bg-neutral-900/30 hover:bg-neutral-900/60 hover:border-neutral-700/50 transition-all duration-300 animate-on-scroll" aria-label="API Development and Integration">
+					<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-brand-600/10 text-brand-400 mb-5 group-hover:bg-brand-600/20 transition-colors duration-300">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<path d="M18 20V10"></path>
+							<path d="M12 20V4"></path>
+							<path d="M6 20v-6"></path>
+						</svg>
+					</div>
+					<h3 class="text-lg font-semibold text-white mb-2">API Development</h3>
+					<p class="text-sm text-neutral-400 leading-relaxed">Robust APIs and seamless integrations that connect your systems and unlock data flow.</p>
+				</article>
+
+				<!-- Cloud Solutions -->
+				<article class="group p-6 rounded-2xl border border-neutral-800/50 bg-neutral-900/30 hover:bg-neutral-900/60 hover:border-neutral-700/50 transition-all duration-300 animate-on-scroll" aria-label="Cloud Solutions">
+					<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-brand-600/10 text-brand-400 mb-5 group-hover:bg-brand-600/20 transition-colors duration-300">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+						</svg>
+					</div>
+					<h3 class="text-lg font-semibold text-white mb-2">Cloud Solutions</h3>
+					<p class="text-sm text-neutral-400 leading-relaxed">Cloud architecture, deployment, and infrastructure designed for reliability and scale.</p>
+				</article>
+
+				<!-- Mobile Apps -->
+				<article class="group p-6 rounded-2xl border border-neutral-800/50 bg-neutral-900/30 hover:bg-neutral-900/60 hover:border-neutral-700/50 transition-all duration-300 animate-on-scroll" aria-label="Mobile Application Development">
+					<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-brand-600/10 text-brand-400 mb-5 group-hover:bg-brand-600/20 transition-colors duration-300">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+							<line x1="12" y1="18" x2="12.01" y2="18"></line>
+						</svg>
+					</div>
+					<h3 class="text-lg font-semibold text-white mb-2">Mobile Apps</h3>
+					<p class="text-sm text-neutral-400 leading-relaxed">Cross-platform mobile applications that deliver native performance and great user experience.</p>
+				</article>
+
+				<!-- Consulting -->
+				<article class="group p-6 rounded-2xl border border-neutral-800/50 bg-neutral-900/30 hover:bg-neutral-900/60 hover:border-neutral-700/50 transition-all duration-300 animate-on-scroll" aria-label="Technology Consulting">
+					<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-brand-600/10 text-brand-400 mb-5 group-hover:bg-brand-600/20 transition-colors duration-300">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+							<path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+						</svg>
+					</div>
+					<h3 class="text-lg font-semibold text-white mb-2">Consulting</h3>
+					<p class="text-sm text-neutral-400 leading-relaxed">Strategic technology guidance to help you make informed decisions and plan your roadmap.</p>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<!-- About Section -->
+	<section id="about" class="py-24 sm:py-32 relative">
+		<!-- Subtle top border -->
+		<div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-neutral-800 to-transparent"></div>
+
+		<div class="max-w-6xl mx-auto px-6">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+				<!-- Text content -->
+				<div class="animate-on-scroll">
+					<span class="inline-block text-xs font-medium tracking-[0.2em] uppercase text-brand-400 mb-4">Who We Are</span>
+					<h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6">Built on Precision,<br>Driven by Purpose</h2>
+					<p class="text-neutral-400 leading-relaxed mb-10">
+						At v3ck, we believe great software should be invisible — it just works. We focus on clean architecture, efficient code, and reliable delivery. No bloat. No shortcuts. Just well-engineered solutions.
+					</p>
+
+					<!-- Values -->
+					<div class="space-y-6">
+						<div class="flex gap-5">
+							<div class="shrink-0 w-10 h-10 flex items-center justify-center rounded-lg bg-neutral-800/50 text-brand-400 font-mono text-sm font-medium">01</div>
+							<div>
+								<h4 class="text-white font-semibold mb-1">Simple</h4>
+								<p class="text-sm text-neutral-400 leading-relaxed">Clean design, intuitive interfaces, and code that's easy to maintain and extend.</p>
+							</div>
+						</div>
+						<div class="flex gap-5">
+							<div class="shrink-0 w-10 h-10 flex items-center justify-center rounded-lg bg-neutral-800/50 text-brand-400 font-mono text-sm font-medium">02</div>
+							<div>
+								<h4 class="text-white font-semibold mb-1">Efficient</h4>
+								<p class="text-sm text-neutral-400 leading-relaxed">Optimized for performance. We ship fast without cutting corners.</p>
+							</div>
+						</div>
+						<div class="flex gap-5">
+							<div class="shrink-0 w-10 h-10 flex items-center justify-center rounded-lg bg-neutral-800/50 text-brand-400 font-mono text-sm font-medium">03</div>
+							<div>
+								<h4 class="text-white font-semibold mb-1">Reliable</h4>
+								<p class="text-sm text-neutral-400 leading-relaxed">Battle-tested solutions you can count on. Built to last, built to scale.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Code block visual -->
+				<div class="animate-on-scroll">
+					<div class="rounded-2xl border border-neutral-800/50 bg-neutral-900/50 overflow-hidden shadow-2xl shadow-black/20">
+						<div class="flex items-center gap-2 px-5 py-3.5 border-b border-neutral-800/50 bg-neutral-900/30">
+							<span class="w-3 h-3 rounded-full bg-neutral-700"></span>
+							<span class="w-3 h-3 rounded-full bg-neutral-700"></span>
+							<span class="w-3 h-3 rounded-full bg-neutral-700"></span>
+							<span class="ml-3 text-xs text-neutral-500 font-mono">v3ck.config</span>
+						</div>
+						<pre class="p-6 text-sm sm:text-base font-mono leading-relaxed overflow-x-auto"><code><span class="text-brand-400">approach</span>  <span class="text-neutral-500">=</span> <span class="text-emerald-400">"Simple"</span>
+<span class="text-brand-400">delivery</span> <span class="text-neutral-500">=</span> <span class="text-emerald-400">"Efficient"</span>
+<span class="text-brand-400">quality</span>  <span class="text-neutral-500">=</span> <span class="text-emerald-400">"Reliable"</span>
+
+<span class="text-neutral-600">// That's it. That's the whole philosophy.</span></code></pre>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section -->
+	<section id="contact" class="py-24 sm:py-32 relative">
+		<!-- Subtle top border -->
+		<div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-neutral-800 to-transparent"></div>
+
+		<div class="max-w-3xl mx-auto px-6 text-center animate-on-scroll">
+			<span class="inline-block text-xs font-medium tracking-[0.2em] uppercase text-brand-400 mb-4">Get Started</span>
+			<h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">Let's Build Something</h2>
+			<p class="text-neutral-400 leading-relaxed mb-10 max-w-lg mx-auto">
+				Have a project in mind? We'd love to hear about it. Reach out and let's turn your idea into reality.
+			</p>
+
+			<!-- Email CTA -->
+			<a href="mailto:jve.software@gmail.com"
+				class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-brand-600 text-white font-medium text-lg hover:bg-brand-500 transition-all duration-200 shadow-lg shadow-brand-600/20 hover:shadow-brand-500/30 hover:-translate-y-0.5 mb-10">
+				<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+					<polyline points="22,6 12,13 2,6"></polyline>
+				</svg>
+				jve.software@gmail.com
+			</a>
+
+			<!-- Social links -->
+			<div class="flex items-center justify-center gap-4">
+				<a href="https://github.com/v3ck-com" target="_blank" rel="noopener noreferrer" aria-label="v3ck on GitHub"
+					class="w-11 h-11 flex items-center justify-center rounded-xl border border-neutral-800 bg-neutral-900/30 text-neutral-400 hover:text-white hover:border-neutral-600 hover:bg-neutral-800/50 transition-all duration-200">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+						<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="border-t border-neutral-800/50 py-12" role="contentinfo">
+		<div class="max-w-6xl mx-auto px-6">
+			<div class="flex flex-col sm:flex-row items-center justify-between gap-6 mb-8">
+				<div class="flex items-center gap-4">
+					<img src="images/logo.png" alt="v3ck logo" class="h-6 w-auto" width="80" height="24">
+					<span class="text-sm text-neutral-500 font-mono">Simple; Efficient; Reliable</span>
+				</div>
+				<div class="flex items-center gap-6 text-sm">
+					<a href="#services" class="text-neutral-500 hover:text-neutral-300 transition-colors duration-200">Services</a>
+					<a href="#about" class="text-neutral-500 hover:text-neutral-300 transition-colors duration-200">About</a>
+					<a href="#contact" class="text-neutral-500 hover:text-neutral-300 transition-colors duration-200">Contact</a>
+				</div>
+			</div>
+			<div class="text-center">
+				<p id="copyright" class="text-xs text-neutral-600"></p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			// Dynamic copyright year
+			document.getElementById('copyright').textContent =
+				'\u00A9 ' + new Date().getFullYear() + ' v3ck. All rights reserved.';
+
+			// Scroll animations with Intersection Observer
+			var observer = new IntersectionObserver(function (entries) {
+				entries.forEach(function (entry) {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('is-visible');
+						observer.unobserve(entry.target);
+					}
+				});
+			}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+			document.querySelectorAll('.animate-on-scroll').forEach(function (el) {
+				observer.observe(el);
+			});
+
+			// Stagger service cards
+			var cards = document.querySelectorAll('#services article');
+			cards.forEach(function (card, i) {
+				card.style.transitionDelay = (i * 0.08) + 's';
+			});
+
+			// Navbar scroll effect
+			var navbar = document.getElementById('navbar');
+			window.addEventListener('scroll', function () {
+				if (window.pageYOffset > 50) {
+					navbar.classList.add('navbar-scrolled');
+				} else {
+					navbar.classList.remove('navbar-scrolled');
+				}
+			}, { passive: true });
+
+			// Mobile nav toggle
+			var toggle = document.getElementById('nav-toggle');
+			var mobileMenu = document.getElementById('mobile-menu');
+			toggle.addEventListener('click', function () {
+				var expanded = toggle.getAttribute('aria-expanded') === 'true';
+				toggle.setAttribute('aria-expanded', !expanded);
+				mobileMenu.classList.toggle('hidden');
+				toggle.classList.toggle('nav-toggle-active');
+			});
+
+			// Close mobile nav on link click
+			mobileMenu.querySelectorAll('a').forEach(function (link) {
+				link.addEventListener('click', function () {
+					mobileMenu.classList.add('hidden');
+					toggle.classList.remove('nav-toggle-active');
+					toggle.setAttribute('aria-expanded', 'false');
+				});
+			});
+
+			// Smooth scroll for anchor links (offset for fixed navbar)
+			document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+					var target = document.querySelector(this.getAttribute('href'));
+					if (target) {
+						var navHeight = navbar.offsetHeight;
+						var targetPos = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+						window.scrollTo({ top: targetPos, behavior: 'smooth' });
+					}
+				});
+			});
+		});
+	</script>
 </body>
 
 </html>
